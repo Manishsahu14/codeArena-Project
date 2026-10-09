@@ -3,6 +3,7 @@ import { NavLink } from 'react-router'; // Fixed import
 import { useDispatch, useSelector } from 'react-redux';
 import axiosClient from '../utils/axiosClient';
 import { logoutUser } from '../authSlice';
+import codeArenaLogo from '../assets/CodeArena-Logo.png';
 
 function Homepage() {
   const dispatch = useDispatch();
@@ -56,8 +57,18 @@ function Homepage() {
       {/* Navigation Bar */}
       <nav className="navbar bg-base-100 shadow-lg px-4">
         <div className="flex-1">
-          <NavLink to="/" className="btn btn-ghost text-xl">LeetCode</NavLink>
+          <NavLink to="/" className="flex items-center gap-2">
+            <img
+              src={codeArenaLogo}
+              alt="CodeArena Logo"
+              className="h-10 w-auto object-contain"
+            />
+            
+          </NavLink>
         </div>
+
+
+
         <div className="flex-none gap-4">
           <div className="dropdown dropdown-end">
             <div tabIndex={0} className="btn btn-ghost">
